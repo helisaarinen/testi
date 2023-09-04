@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <title>Opiskelijat</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+        <style>
+        body {
+            background-image: linear-gradient(to bottom right, #F7D358, #9AFE2E, #01DFD7);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+
+
+
+<h1 style="color: #DF01D7;">Opiskelijat</h1>
+<table>
+	<tr>
+	<th style="color: #B40431;">Etunimi</th>
+	<th style="color: #FFFF00;">Sukunimi</th>
+	</tr>
+
+<tr th:each="student : ${students}">
+<td style="color: #04B45F;" th:text="${student.firstName}"></td>
+<td style="color: #2E9AFE;" th:text="${student.lastName}"></td>
+
+</tr> 
+</table>
+<a style="color: #FF0040;" href="/main">Palaa pääsivulle</a>
+
+</body>
+</html>
